@@ -1,0 +1,1 @@
+rayon::iter::FlatMap<rayon::iter::Filter<rayon::slice::Iter<'_, Triangle>, [closure@src/par_delauney.rs:51:13: 51:18]>, [closure@src/par_delauney.rs:52:15: 52:20]>
