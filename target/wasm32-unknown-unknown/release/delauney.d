@@ -1,1 +1,0 @@
-/home/raphi/Dokumente/Programming/Rust/wasm/delauney_mesh/target/wasm32-unknown-unknown/release/delauney.wasm: /home/raphi/Dokumente/Programming/Rust/wasm/delauney_mesh/src/lib.rs /home/raphi/Dokumente/Programming/Rust/wasm/delauney_mesh/src/voroni.rs
