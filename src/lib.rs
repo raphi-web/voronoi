@@ -1,7 +1,6 @@
 use wasm_bindgen::{__rt::IntoJsResult, prelude::*};
 mod voroni;
 use js_sys;
-use web_sys::console;
 use std::panic;
 use voroni::gen_voronoi;
 extern crate console_error_panic_hook;

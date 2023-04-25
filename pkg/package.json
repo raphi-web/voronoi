@@ -1,0 +1,17 @@
+{
+  "name": "wasm_voronoi",
+  "collaborators": [
+    "raphi-web <73493970+raphi-web@users.noreply.github.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "wasm_voronoi_bg.wasm",
+    "wasm_voronoi.js",
+    "wasm_voronoi.d.ts"
+  ],
+  "module": "wasm_voronoi.js",
+  "types": "wasm_voronoi.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

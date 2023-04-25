@@ -2,11 +2,6 @@ extern crate voronoi;
 use voronoi::{make_polygons, voronoi, Point};
 
 pub fn gen_voronoi(x: &Vec<f64>, y: &Vec<f64>, box_size:f64) -> Vec<Vec<Vec<f64>>> {
-    let xmin = x.iter().min_by(|a, b| a.partial_cmp(b).unwrap()).unwrap();
-    let xmax = x.iter().max_by(|a, b| a.partial_cmp(b).unwrap()).unwrap();
-    let ymin = y.iter().min_by(|a, b| a.partial_cmp(b).unwrap()).unwrap();
-    let ymax = y.iter().min_by(|a, b| a.partial_cmp(b).unwrap()).unwrap();
-
     let points: Vec<Point> = x
         .into_iter()
         .zip(y)
