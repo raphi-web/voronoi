@@ -16,6 +16,11 @@ extern "C" {
 }
 
 #[wasm_bindgen]
+/// This function gets called by javascript
+/// It uses the gen_voronoi function from the voroni module
+/// and returns a 3D Array of polygons to javascript
+/// remember that the return value is already a javascript array not a
+/// rust - vector
 pub fn voronoi(x: Vec<f64>, y: Vec<f64>, window_size: f64) -> js_sys::Array {
     let result = gen_voronoi(&x, &y, window_size);
     let js_result = js_sys::Array::new();
