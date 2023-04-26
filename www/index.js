@@ -28,6 +28,8 @@ async function main() {
     }
 
     function sketch(p_five) {
+
+        p_five.disableFriendlyErrors = true;
         window.onresize = () => {
             console.log("resize");
             let [w, h] = [window.innerWidth, window.innerHeight];
@@ -87,6 +89,7 @@ async function main() {
 
         p_five.draw = function draw() {
             p_five.background("#000616");
+            //optional blur-effect but renrering is much slower
             //p_five.drawingContext.shadowBlur = 32;
             //p_five.drawingContext.shadowColor = p_five.color(207, 7, 99);
             updatePoints();
