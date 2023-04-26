@@ -1,6 +1,6 @@
 import init, { voronoi } from "../pkg/wasm_voronoi.js";
 
-let npoints = 20;
+let npoints = 50;
 let dimension = [window.innerWidth, window.innerHeight];
 let points = randomPoints(npoints, 0, dimension[0], 0, dimension[1]);
 let colors = points.map(() => rColor(70));
@@ -87,8 +87,8 @@ async function main() {
 
         p_five.draw = function draw() {
             p_five.background("#000616");
-            p_five.drawingContext.shadowBlur = 32;
-            p_five.drawingContext.shadowColor = p_five.color(207, 7, 99);
+            //p_five.drawingContext.shadowBlur = 32;
+            //p_five.drawingContext.shadowColor = p_five.color(207, 7, 99);
             updatePoints();
             drawPoints(points);
             draw_polygons(points);
@@ -122,8 +122,8 @@ function pnts2xy(pnts) {
 }
 
 function rescale(pnt, xmax_old, xmax_new, ymax_old, ymax_new) {
-    x = pnt[0];
-    y = pnt[1];
+    let x = pnt[0];
+    let y = pnt[1];
 
     x = (x / xmax_old) * xmax_new;
     y = (y / ymax_old) * ymax_new;
