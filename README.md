@@ -12,4 +12,4 @@ The already compiled version is available in the `.pkg` directory.
 To compile it yourself use `wasm-pack build --target web`.
 
 Then run it using `python3 srvr.py` and open the link in the browser,  
-navigate to the www directory in your browser. This is just a small webserver for hosting the website.
+navigate to the `www` directory in your browser. This is just a small webserver for hosting the website.
