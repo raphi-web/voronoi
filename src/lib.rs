@@ -1,13 +1,8 @@
 use wasm_bindgen::{__rt::IntoJsResult, prelude::*};
 mod voroni;
 use js_sys;
-use std::panic;
 use voroni::gen_voronoi;
 extern crate console_error_panic_hook;
-
-//#[cfg(feature = "paralell")]
-//#[allow(another_lint)]
-//mod par_delauney;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -21,19 +16,7 @@ extern "C" {
 }
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, delauney!");
-}
-
-#[wasm_bindgen]
-pub fn testing(x: Vec<f32>) {
-    panic::set_hook(Box::new(console_error_panic_hook::hook));
-    alert(x[0].to_string().as_str());
-}
-
-#[wasm_bindgen]
-pub fn voronoi(x: Vec<f64>, y: Vec<f64>, window_size:f64) -> js_sys::Array {
-   
+pub fn voronoi(x: Vec<f64>, y: Vec<f64>, window_size: f64) -> js_sys::Array {
     let result = gen_voronoi(&x, &y, window_size);
     let js_result = js_sys::Array::new();
     for v in result.iter() {
@@ -49,8 +32,4 @@ pub fn voronoi(x: Vec<f64>, y: Vec<f64>, window_size:f64) -> js_sys::Array {
         js_result.push(&poly);
     }
     js_result
-}
-
-pub fn console_log() {
-    web_sys::console::log_2(&"%s : Hello World".into(), &"John".into());
 }

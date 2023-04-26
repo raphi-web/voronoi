@@ -1,6 +1,6 @@
 import init, { voronoi } from "../pkg/wasm_voronoi.js";
 
-let npoints = 50;
+let npoints = 45;
 let dimension = [window.innerWidth, window.innerHeight];
 let points = randomPoints(npoints, 0, dimension[0], 0, dimension[1]);
 let colors = points.map(() => rColor(70));
