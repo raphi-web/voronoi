@@ -41,7 +41,7 @@ function randomPoints(n, xmin, xmax, ymin, ymax) {
 }
 /**
  * transposes the points from [[x1,x2], [x2,y2] ...]
- * to [[x1,x2], [y1,y2]]
+ * to [[x1,x2], [y1,y2]...]
  * @param {pnts} points in 2d-Array
  */
 function pnts2xy(pnts) {
@@ -55,7 +55,7 @@ function pnts2xy(pnts) {
 }
 /**
  * Scales the points if window is resized
- * @param {pnt} 1D Array, [x1,x2]
+ * @param {pnt} 1D Array, [x,y]
  * @param {xmax_old} number, current xmax
  * @param {xmax_new} number, new xmax to scale to
  * @param {ymax_old} number, current ymax
